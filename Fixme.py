@@ -20,9 +20,9 @@ def evens(n):
     >>> evens(-1)
     []
     '''
-    xs = range(0,n/2)
-    xs = map(lambda x: x+2, xs)
-    return xs
+    ns = range(0,n/2)
+    ns = map(lambda n: n+2, ns)
+    return ns
 
 def threes(n):
     '''
@@ -39,7 +39,11 @@ def threes(n):
     >>> threes(50)
     [3, 13, 23, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 43]
     '''
-    
+    three = lambda n: 3 in n
+    ns = range(0,n)
+    ns = filter(three,ns)
+    ns = list(ns)
+    return ns
 
 def small_words(text):
     '''
