@@ -62,7 +62,7 @@ def small_words(text):
     >>> small_words('a big word is bad')
     ['a', 'big', 'word', 'is', 'bad']
     '''
-    xs = range(0, len(text)+1)
+    xs = text.split()
     xs = list(filter(lambda x: True if len(x) < 5 else False, xs))
     return xs
 
