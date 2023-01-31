@@ -41,9 +41,9 @@ def threes(n):
     >>> threes(50)
     [3, 13, 23, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 43]
     '''
-    n: 3 in n
+    ns: 3 in n
     ns = range(n)
-    ns = filter(three, ns)
+    ns = filter(n, ns)
     ns = list(ns)
     return ns
 
@@ -64,7 +64,7 @@ def small_words(text):
     >>> small_words('a big word is bad')
     ['a', 'big', 'word', 'is', 'bad']
     '''
-    text: len(text) < 5
+    texts: len(text) < 5
     texts = filter(small_words, texts)
     return texts.split()
 
@@ -101,6 +101,6 @@ def lengths(strings):
     >>> lengths(['this','is','a','test'])
     [4, 2, 1, 4]
     '''
-    stringss = map(lengths,strings)
+    stringss = map(lengths, strings)
     stringss = list(stringss)
     return len(stringss)
