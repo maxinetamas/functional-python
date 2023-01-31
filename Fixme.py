@@ -21,9 +21,7 @@ def evens(n):
     >>> evens(-1)
     []
     '''
-    ns = range(n/2)
-    ns = map(evens, ns)
-    return ns*2
+    list(filter(lambda n: n%2 == 0, range(0,n))
 
 
 def threes(n):
@@ -41,11 +39,7 @@ def threes(n):
     >>> threes(50)
     [3, 13, 23, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 43]
     '''
-    ns: 3 in n
-    ns = range(n)
-    ns = filter(n, ns)
-    ns = list(ns)
-    return ns
+    list(filter(lamda n: 3 in n, range(0,n))
 
 
 def small_words(text):
@@ -64,9 +58,7 @@ def small_words(text):
     >>> small_words('a big word is bad')
     ['a', 'big', 'word', 'is', 'bad']
     '''
-    texts: len(text) < 5
-    texts = filter(small_words, texts)
-    return texts.split()
+    list(filter(lambda text: len(text) < 5, range(0,len(text))
 
 
 def squares(n):
@@ -83,11 +75,7 @@ def squares(n):
     >>> squares(10)
     [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
     '''
-    square = range(n)
-    square = map(squares, square)
-    square = list(square)
-    print("squares=", square)
-    return square*square
+    list(filter(lambda n: n * n, range(0,n))
 
 
 def lengths(strings):
@@ -101,6 +89,4 @@ def lengths(strings):
     >>> lengths(['this','is','a','test'])
     [4, 2, 1, 4]
     '''
-    stringss = map(lengths, strings)
-    stringss = list(stringss)
-    return len(stringss)
+    return strings
