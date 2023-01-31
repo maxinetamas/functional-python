@@ -41,7 +41,7 @@ def threes(n):
     >>> threes(50)
     [3, 13, 23, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 43]
     '''
-    xs = list(filter(lamda x: True if '3' in str(x), range(0,n+1))
+    xs = list(filter(lamda x: True if '3' in str(x), range(0,n+1)))
     return xs
 
 
@@ -79,7 +79,7 @@ def squares(n):
     >>> squares(10)
     [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
     '''
-    xs = list(map(lambda x: x*x, xs, range(1,n+1)))
+    xs = list(map(lambda x: x*x, xs, range(1,n+1))))
     return xs
 
 
