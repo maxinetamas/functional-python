@@ -21,7 +21,8 @@ def evens(n):
     >>> evens(-1)
     []
     '''
-    xs = list(filter(lambda x: x%2 == 0, range(0=n+1))
+    xs = range(n+1)
+    xs = list(filter(lambda x: x % 2 == 0, xs)
     return xs
 
 
