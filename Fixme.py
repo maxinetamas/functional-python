@@ -5,6 +5,7 @@ Your solutions should use the map and filter functions,
 and not for loops or list comprehensions.
 '''
 
+
 def evens(n):
     '''
     Returns a list of even numbers from 0 to n inclusive.
@@ -20,9 +21,10 @@ def evens(n):
     >>> evens(-1)
     []
     '''
-    return n*2
-ns = range(n/2)
-ns = map(evens,ns)
+    ns = range(n/2)
+    ns = map(evens,ns)
+    return ns*2
+
 
 def threes(n):
     '''
@@ -39,11 +41,12 @@ def threes(n):
     >>> threes(50)
     [3, 13, 23, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 43]
     '''
+    three = lambda n: 3 in n
+    ns = range(n)
+    ns = filter(three,ns)
+    ns = list(ns)
     return ns
-three = lambda n: 3 in n
-ns = range(n)
-ns = filter(three,ns)
-ns = list(ns)
+
 
 def small_words(text):
     '''
@@ -61,9 +64,10 @@ def small_words(text):
     >>> small_words('a big word is bad')
     ['a', 'big', 'word', 'is', 'bad']
     '''
-    return text.split()
-texts = lambda text: len(text) < 5
-texts = filter(small_words, texts)
+    texts = lambda text: len(text) < 5
+    texts = filter(small_words, texts)
+    return texts.split()
+
 
 def squares(n):
     '''
@@ -79,11 +83,12 @@ def squares(n):
     >>> squares(10)
     [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
     '''
-    return n*n
-square = range(n)
-square = map(squares, square)
-square = list(square)
-print("squares=", square)
+    square = range(n)
+    square = map(squares, square)
+    square = list(square)
+    print("squares=", square)
+    return square*square
+
 
 def lengths(strings):
     '''
@@ -96,6 +101,6 @@ def lengths(strings):
     >>> lengths(['this','is','a','test'])
     [4, 2, 1, 4]
     '''
-    return len(strings)
-stringss = map(lengths,stringss)
-stringss = list(stringss)
+    stringss = map(lengths,stringss)
+    stringss = list(stringss)
+    return len(stringss)
