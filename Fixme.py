@@ -22,7 +22,7 @@ def evens(n):
     []
     '''
     xs = range(n+1)
-    xs = list(filter(lambda x: x % 2 == 0, xs)
+    xs = list(filter(lambda x: x % 2 == 0, xs))
     return xs
 
 
